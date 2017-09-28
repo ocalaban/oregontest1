@@ -1,0 +1,25 @@
+# DirectoryIndex ../core/admin/index.php?uniqName=index
+
+Options -Indexes
+
+RewriteEngine On
+
+RewriteRule ^$ index.htm [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\/]*)\.html{0,1}$ ../core/admin/index.php?uniqName=$1 [QSA]
+
+#<Files "*.jp*g">
+#ExpiresActive On                  # enable expirations
+#ExpiresDefault M0
+#</Files>
+
+#<Files "*.png">
+#ExpiresActive On
+#ExpiresDefault M0
+#</Files>
+
+#<Files "*.gif">
+#ExpiresActive On
+#ExpiresDefault M0
+#</Files>
